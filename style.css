@@ -16,10 +16,10 @@ table{
 
 th{border: black solid 2px;}
 
-th:nth-of-type(1){width: 100px;}
+th:nth-of-type(1){width: 125px;}
 th:nth-of-type(2){width: 15px;}
 td:nth-of-type(2){text-align: center;}
-th:nth-of-type(3){width: 130px;}
+th:nth-of-type(3){width: 100px;}
 td:nth-of-type(3){text-align: center;}
 th:nth-of-type(5){width: 70px;}
 
@@ -42,8 +42,11 @@ td:has(.detail){border: none;}
     top: 0px;
     right: 0px;
     height: 100%;
+    width: 25px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     & a{
         height: calc(100vh / 26 - 0.6vh);
         width: 15px;
