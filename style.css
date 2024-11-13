@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+html{
+    scroll-behavior: smooth;
+}
+
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: black solid 1px;
+    &:empty{
+        background-color: #00000044;
+    }
+}
+td:has(.detail){
+    border: none;
+}
+.detail{
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.jump{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    & a{
+        height: calc(100vh / 26 - 0.6vh);
+        padding-left: 3px;
+        background-color: white;
+        border: black solid 1px;
+        border-radius: 25% 0% 0% 25%;
+        &:link{color:black;}
+        &:visited{color: black;}
+    }
+}
+.start{
+    background-color: #ff00001f;
+}
