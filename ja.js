@@ -53,7 +53,7 @@ document.addEventListener('scroll',function(){
         }
     };
     let eye = document.getElementById('scrolleye');
-    eye.style.top = count * 45 * -1 - 5 + 'px';
+    eye.style.top = count * 45 * -1 + 'px';
 });
 
 
