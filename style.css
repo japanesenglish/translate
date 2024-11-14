@@ -10,9 +10,6 @@ table{
     table-layout: fixed;
     font-size: small;
 }
-.container{
-    padding-right: 15px;
-}
 
 th{border: black solid 2px;}
 
@@ -21,7 +18,6 @@ th:nth-of-type(2){width: 15px;}
 td:nth-of-type(2){text-align: center;}
 th:nth-of-type(3){width: 90px;}
 td:nth-of-type(3){text-align: center;}
-th:nth-of-type(5){width: 70%;}
 
 td{
     border: black solid 1px;
@@ -37,28 +33,88 @@ td:has(.detail){border: none;}
     transition: all 0.5s;
 }
 
-.jump{
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 25px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    & a{
-        height: calc(85vh / 26 );
-        max-height: 18px;
-        overflow: hidden;
-        width: 15px;
-        padding-left: 3px;
-        background-color: #00000000;
-        border: black solid 1px;
-        border-radius: 25% 0% 0% 25%;
-        &:link{color:black;}
-        &:visited{color: black;}
-    }
-}
+
 .start{
     border: black solid 2px;
+}
+
+.jbtn{
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: black solid 1px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: all 0.3s;
+    & div{
+        height: 25px;
+        width: 0px;
+        font-size: 20px;
+        text-align: center;
+        color: #00000000;
+        transition: all 1s;
+        & img{
+            height: 0px;
+            overflow: hidden;
+        }
+    };
+    & #scrolleye{
+        position: absolute;
+        top: -5px;
+        left: 5px;
+        & div{
+            right: 10px;
+            height: 45px;
+            width: 40px;
+            font-size: 40px;
+            font-family: serif;
+            text-align: center;
+            color: black;
+        }
+    };
+}
+.jhead{
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    height: 360px;
+    width: 50px;
+    border-radius: 10px;
+    border: black solid 1px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: all 0.3s;
+    & div{
+        height: 25px;
+        width: 25px;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        overflow: hidden;
+        transition: all 0.3s;
+        & img{
+            height: 20px;
+            padding-top: 5px;
+        }
+    };
+    & #scrolleye{
+        left: 5px;
+        overflow: hidden;
+        & div{
+            right: 10px;
+            height: 0px;
+            width: 40px;
+            font-size: 40px;
+            text-align: center;
+            color: black;
+        }
+    };
 }
