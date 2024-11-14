@@ -19,9 +19,9 @@ th{border: black solid 2px;}
 th:nth-of-type(1){width: 125px;}
 th:nth-of-type(2){width: 15px;}
 td:nth-of-type(2){text-align: center;}
-th:nth-of-type(3){width: 100px;}
+th:nth-of-type(3){width: 90px;}
 td:nth-of-type(3){text-align: center;}
-th:nth-of-type(5){width: 70px;}
+th:nth-of-type(5){width: 70%;}
 
 td{
     border: black solid 1px;
@@ -41,17 +41,18 @@ td:has(.detail){border: none;}
     position: fixed;
     top: 0px;
     right: 0px;
-    height: 100%;
     width: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
     & a{
-        height: calc(100vh / 26 - 0.6vh);
+        height: calc(85vh / 26 );
+        max-height: 18px;
+        overflow: hidden;
         width: 15px;
         padding-left: 3px;
-        background-color: white;
+        background-color: #00000000;
         border: black solid 1px;
         border-radius: 25% 0% 0% 25%;
         &:link{color:black;}
