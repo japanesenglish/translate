@@ -45,7 +45,7 @@ document.addEventListener('scroll',function(){
         after = after + 1;
     });
     count = 0;
-    for (let i = 1; i < 25; i++){
+    for (let i = 1; i < 26; i++){
         if(ytop < by[i]){
             i = 99;
         } else {
