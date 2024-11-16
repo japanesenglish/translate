@@ -168,10 +168,11 @@ div:has(#keyboard){
 #keyboard{
     height: 100px;
     width: 100vw;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 10px;
     background-color: white;
     border: black solid 2px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
