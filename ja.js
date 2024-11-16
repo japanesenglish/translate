@@ -10,7 +10,6 @@ var bydis = []
 for (let i = 0; i < 26; i++){
     bydis.push(by[i]-by[i-1]);
 };
-console.log(bydis);
 
 let jumpbtn = []
 for (let i = 0; i < 26; i++){
@@ -111,10 +110,22 @@ jumpbtn.forEach(function(car){
         if(pin.classList.contains('on') == false){
             setTimeout(() => {
             j.classList.toggle('jbtn');
-            console.log(j)                
             }, 1);
             j.classList.toggle('jhead');
-            console.log(j)
         }
     })
 })
+
+
+
+
+let words = document.querySelectorAll('td:nth-of-type(1)')
+words.forEach(function(car){
+    var text = car.textContent;
+    if(text.indexOf("'") >= 0){
+        let apo = text.indexOf("'");
+        text = text.slice(0,apo) + text.slice(apo+1);
+    }
+    car.classList.toggle(text);
+})
+
