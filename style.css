@@ -125,7 +125,6 @@ td:has(.detail){border: none;}
 
 input{
     position: fixed;
-    bottom: 20px;
     right: 20px;
     height: 35px;
     width: 60vw;
