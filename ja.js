@@ -47,3 +47,11 @@ pp.addEventListener('keyup',function(){
     });
 });
 
+let vv = window.visualViewport.height;
+let inp = document.querySelector('input');
+inp.style.top = vv - 60 + 'px';
+window.addEventListener('resize',function(){
+    vv = window.visualViewport.height;
+    inp.style.top = vv - 60 + 'px';
+    console.log(vv)
+})
