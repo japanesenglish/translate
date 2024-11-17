@@ -1,4 +1,3 @@
-
 let words = document.querySelectorAll('td:nth-of-type(1)')
 words.forEach(function(car){
     var text = car.textContent;
@@ -34,8 +33,6 @@ a.forEach(function(car){
         };
     });
 });
-
-
 
 
 let pp = document.querySelector('input');
