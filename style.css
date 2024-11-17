@@ -136,3 +136,8 @@ input{
     font-size: 110%;
     background-color: white;
 } 
+
+h1{
+    position: fixed;
+    top: 30px;
+}
