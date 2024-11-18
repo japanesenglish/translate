@@ -3,6 +3,10 @@
 html{
     scroll-behavior: smooth;
 }
+.kome{
+    font-size: small;
+    color: gray;
+}
 
 table{
     border-collapse: collapse;
@@ -29,6 +33,7 @@ td{
 td:has(.detail){border: none;}
 .detail{
     height: 0px;
+    background-color: #00000018;
     overflow: hidden;
     transition: all 0.5s;
 }
@@ -137,3 +142,19 @@ input{
     background-color: white;
 } 
 
+span{
+    position: relative;
+    &:hover{
+        cursor: pointer;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 1px;
+        left: 0px;
+        height: 0px;
+        width: 100%;
+        border-top: black dotted 1px;
+    }
+}
