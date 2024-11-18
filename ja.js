@@ -1,21 +1,24 @@
+
 let words = document.querySelectorAll('td:nth-of-type(1)')
 words.forEach(function(car){
-    var text = car.textContent;
-    let apo = text.indexOf("'");
-    let hai = text.indexOf("-");
-    if(apo >= 0){
-        text = text.slice(0,apo) + text.slice(apo+1);
+    if(car.classList.contains('no') == false){
+        var text = car.textContent;
+        let apo = text.indexOf("'");
+        let hai = text.indexOf("-");
+        if(apo >= 0){
+            text = text.slice(0,apo) + text.slice(apo+1);
+        }
+        if(hai >= 0){
+            text = text.slice(0,hai) + text.slice(hai+1);
+        }
+        text = text.toLowerCase();
+        let long = text.length;
+        for (let i = 1; i < long; i++){
+            let textlong = text.slice(0,i);
+            car.classList.toggle(textlong);
+        }
+        car.classList.toggle(text);
     }
-    if(hai >= 0){
-        text = text.slice(0,hai) + text.slice(hai+1);
-    }
-    text = text.toLowerCase();
-    let long = text.length;
-    for (let i = 1; i < long; i++){
-        let textlong = text.slice(0,i);
-        car.classList.toggle(textlong);
-    }
-    car.classList.toggle(text);
 })
 
 
@@ -35,11 +38,11 @@ a.forEach(function(car){
 });
 
 
-let pp = document.querySelector('input');
-pp.addEventListener('keyup',function(){
-    let q = '.' + pp.value.toLowerCase();
-    let oo = document.querySelector(q);
-    let go = Math.floor(oo.getBoundingClientRect().top) + window.scrollY;
+let sbox = document.querySelector('input');
+sbox.addEventListener('keyup',function(){
+    let cla = '.' + sbox.value.toLowerCase();
+    let ele = document.querySelector(cla);
+    let go = Math.floor(ele.getBoundingClientRect().top) + window.scrollY;
     window.scrollTo({
         top: go,
         left: 0,
@@ -47,4 +50,16 @@ pp.addEventListener('keyup',function(){
     });
 });
 
-
+let jump = document.querySelectorAll('span');
+jump.forEach(function(car){
+    car.addEventListener('click',function(){
+        let cla = "." + car.textContent;
+        let ele = document.querySelector(cla);
+        let go = Math.floor(ele.getBoundingClientRect().top) + window.scrollY;
+        window.scrollTo({
+            top: go,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
+});
