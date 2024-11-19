@@ -17,24 +17,57 @@ table{
 
 th{border: black solid 2px;}
 
-th:nth-of-type(1){width: 125px;}
-th:nth-of-type(2){width: 15px;}
+th:nth-of-type(1){width: 120px;}
+th:nth-of-type(2){width: 13px;}
 td:nth-of-type(2){text-align: center;}
-th:nth-of-type(3){width: 90px;}
+th:nth-of-type(3){width: 70px;}
 td:nth-of-type(3){text-align: center;}
 
 td{
     border: black solid 1px;
+    border-bottom: none;
     overflow: auto;
     &:empty{
         background-color: #00000044;
     }
+    &:has(.detail){
+        border: none;
+    }
+}
+
+
+.xxx{
+    overflow: visible;
+}
+.xxx::before{
+    content: '▾';
+    color: gray;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    height: 0px;
+    width: 0px;
+    margin-left: -12px;
+}
+tr:has(.detail){
+    position: relative;
 }
 .detail{
+    position: absolute;
+    top: 0px;
+    left: 0px;
     height: 0px;
-    background-color: #00000018;
+    width: 100%;
+    padding: 0 auto;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    background-color: #bdbdbd;
     overflow: hidden;
     transition: all 0.5s;
+}
+.open{
+    border-bottom: black solid 1px;
+    border-top: none;
 }
 
 
