@@ -54,19 +54,23 @@ tr:has(.detail){
 }
 td:has(.detail){
     position: absolute;
+    left: 0px;
+    width: 100%;
 }
 .detail{
     top: 0px;
     left: 0px;
     height: 0px;
-    width: 100%;
-    padding: 0 auto;
+    border-left: white solid 1px;
+    border-right: white solid 1px;
+    margin-left: -1px;
+    margin-right: -1px;
     background-color: #bdbdbd;
     overflow: hidden;
     transition: all 0.5s;
 }
 .open{
-    border-bottom: black solid 1px;
+    border-bottom: black solid 2px;
     border-top: none;
 }
 
