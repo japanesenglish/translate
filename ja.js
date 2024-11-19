@@ -1,5 +1,6 @@
 //詳細オープンアコーディオン
 let a = document.querySelectorAll('tr');
+let z = 1;
 a.forEach(function(car){
     car.addEventListener('click',function(){
         let a1 = car.nextElementSibling.querySelector('.detail');
@@ -7,6 +8,9 @@ a.forEach(function(car){
             a1.classList.toggle('open');
             if(a1.classList.contains('open')){
                 a1.style.height = a1.scrollHeight + 'px';
+                a1.style.zIndex = z;
+                z = z + 1;
+                console.log(z);
                 setTimeout(() => {
                     a1.style.height = 'auto';
                 }, 500);
