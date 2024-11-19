@@ -36,19 +36,7 @@ td{
 }
 
 
-.xxx{
-    overflow: visible;
-}
-.xxx::before{
-    content: '▾';
-    color: gray;
-    display: flex;
-    top: 0px;
-    left: 0px;
-    height: 0px;
-    width: 0px;
-    margin-left: -12px;
-}
+
 tr:has(.detail){
     position: relative;
 }
