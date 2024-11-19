@@ -35,16 +35,18 @@ words.forEach(function(car){
             text = text.slice(0,hai) + text.slice(hai+1);
         }
         text = text.toLowerCase();
-        let long = text.length;
-        for (let i = 1; i < long; i++){
-            let textlong = text.slice(0,i);
-            car.classList.toggle(textlong);
+        for (let i = 1; i < 99; i++){
+            if(textlong == text.slice(0,i)){
+                i = 99;
+            } else {
+                var textlong = text.slice(0,i);
+                car.classList.toggle(textlong);                
+            }
         }
     } else {
         words[i].classList.toggle('xxx');
     }
     i= i + 1;
-    console.log(words)
 })
 
 //検索ジャンプ
@@ -64,9 +66,9 @@ sbox.addEventListener('keyup',function(){
 let jump = document.querySelectorAll('span');
 jump.forEach(function(car){
     car.addEventListener('click',function(){
-        let cla = "." + car.textContent;
-        let ele = document.querySelector(cla);
-        let go = Math.floor(ele.getBoundingClientRect().top) + window.scrollY;
+        var cla = "." + car.textContent;
+        var ele = document.querySelector(cla);
+        var go = Math.floor(ele.getBoundingClientRect().top) + window.scrollY;
         window.scrollTo({
             top: go,
             left: 0,
