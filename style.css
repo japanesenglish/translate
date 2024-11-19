@@ -36,19 +36,31 @@ td{
 }
 
 
-
+.xxx{
+    overflow: visible;
+}
+.xxx::before{
+    content: '▾';
+    color: gray;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    height: 0px;
+    width: 0px;
+    margin-left: -12px;
+}
 tr:has(.detail){
     position: relative;
 }
-.detail{
+td:has(.detail){
     position: absolute;
+}
+.detail{
     top: 0px;
     left: 0px;
     height: 0px;
     width: 100%;
     padding: 0 auto;
-    border-left: black solid 1px;
-    border-right: black solid 1px;
     background-color: #bdbdbd;
     overflow: hidden;
     transition: all 0.5s;
