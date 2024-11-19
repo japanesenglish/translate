@@ -58,6 +58,7 @@ td:has(.detail){
     width: 100%;
 }
 .detail{
+    position: relative;
     top: 0px;
     left: 0px;
     height: 0px;
@@ -73,7 +74,6 @@ td:has(.detail){
     border-bottom: black solid 2px;
     border-top: none;
 }
-
 
 .start{
     border: black solid 2px;
